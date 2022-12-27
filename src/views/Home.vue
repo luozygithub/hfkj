@@ -1,12 +1,13 @@
 <template>
   <div class="home">
+
     <div id="___gatsby">
       <div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper">
         <div>
           <div class="index-block1 en" id="index" style="background-color: black; height: 761px;">
             <img src="../assets/black_linear.png" class="linear-black">
             <div class="block1-mp4-container"   >
-              <video mute="muted"  class="bvideo" autoPlay="autoplay" loop="loop" >
+              <video muted v-if="isShowView" class="bvideo" autoPlay="autoplay" loop="loop" >
                 <source type="video/mp4" :src="videoUrl"/>
               </video>
             </div>
@@ -931,7 +932,8 @@ export default {
     return {
       navPosition:"relative",
       bgOpacity:0,
-      videoUrl:videoUrl
+      videoUrl:videoUrl,
+      isShowView:false
     }
   },
   components: {
@@ -947,6 +949,9 @@ export default {
   async mounted() {
     let timer = null
     let _this = this
+    setTimeout(()=>{
+      this.isShowView = true
+    },500)
     window.addEventListener('scroll', function(e) {
       if(timer) {
         return
