@@ -195,7 +195,7 @@
                         <clippath id="clip0_57_564">
                           <rect width="75.0999" height="74" fill="white"></rect>
                         </clippath>
-                        
+
                       </defs>
                     </svg>
                   </a>
