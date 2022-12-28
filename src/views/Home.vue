@@ -991,7 +991,7 @@ export default {
 
 .typing-demo {
   width: 36ch;
-  animation: typing 2s steps(36), blink .5s step-end infinite alternate;
+  animation: typing 10s infinite steps(36), blink 0.8s  infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
@@ -1000,8 +1000,17 @@ export default {
 }
 
 @keyframes typing {
-  from {
+  0% {
     width: 0
+  }
+  40% {
+    width: 36ch
+  }
+  60%{
+    width: 36ch
+  }
+  100%{
+    width: 0;
   }
 }
 
